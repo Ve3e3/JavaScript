@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+
+    <h1>ACHE O EQUILIBRIO ENTRE O SEU PESO E SUA ALTURA!!!</h1>
+    <hr>
+    <p>
+        <label for="txtP">Peso</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtP">
+    </p>
+    <p>
+        <label for="txtL">Altura</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtL">
+    </p>
+    <p>
+        <button onclick="Valor()">OK</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+    <hr>
+
+    <script>
+
+        function Valor(){
+            let P = parseFloat(document.getElementById("txtP").Value)
+            let L = parseFloat(document.getElementById("txtL").Value)
+            console.log('valido')
+
+            total = P / (L * L)
+
+            if( total > 18,5){
+                 result.innerHTML = total + "você esta abaixo do peso"
+            }
+
+            
+        }
+
+    </script>
+
+</body>
+</html>

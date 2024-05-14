@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+
+    <h1>BOLETIM DOS CRIA</h1>
+    <hr>
+    <p>
+        <label for="txtA">INDIQUE A PRIMEIRA NOTA</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtA">
+    </p>
+    <p>
+        <label for="txtB">INDIQUE A SEGUNDA NOTA</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtB">
+    </p>
+    <p>
+        <label for="txtC">INDIQUE A TERCEIRA NOTA</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtC">
+    </p>
+    <p>
+        <label for="txtD">INDIQUE A QUARTA NOTA</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtD">
+    </p>
+    <hr>
+    <p>
+        <button onclick="Valor()">OK</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+
+    <script>
+
+    const result = document.getElementById('result')   
+    
+    //let T = parseFloat(document.getElementById("txtT")).value
+    let total = 0
+
+        function Valor(){
+
+        let A = parseFloat(document.getElementById("txtA").value)
+        let B = parseFloat(document.getElementById("txtB").value)
+        let C = parseFloat(document.getElementById("txtC").value)
+        let D = parseFloat(document.getElementById("txtD").value)
+        console.log('valido')
+
+        if (A > 10) {
+                alert("Erro, VALOR A deve ser menor do que 10")
+                document.getElementById('txtA').value = ""
+                document.getElementById('txtA').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if (A < 0) {
+                alert("Erro, A deve ser maior do que 0")
+                document.getElementById('txtA').value = ""
+                document.getElementById('txtA').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if (B > 10) {
+                alert("Erro, VALOR B deve ser menor do que 10")
+                document.getElementById('txtB').value = ""
+                document.getElementById('txtB').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if (B < 0) {
+                alert("Erro, B deve ser maior do que 0")
+                document.getElementById('txtB').value = ""
+                document.getElementById('txtB').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if (C > 10) {
+                alert("Erro, VALOR C deve ser menor do que 10")
+                document.getElementById('txtC').value = ""
+                document.getElementById('txtC').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if (C < 0) {
+                alert("Erro, C deve ser maior do que 0")
+                document.getElementById('txtC').value = ""
+                document.getElementById('txtC').focus()
+                result.innerHTML = "-"
+                return
+            }
+             if (D > 10) {
+                alert("Erro, VALOR D deve ser menor do que 10")
+                document.getElementById('txtD').value = ""
+                document.getElementById('txtD').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if (D < 0) {
+                alert("Erro, D deve ser maior do que 0")
+                document.getElementById('txtD').value = ""
+                document.getElementById('txtD').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if(total >= 7){ 
+              result.innerHTML = '<span class=C1> aprovado (NOTA AZUL)' + ' ' + total + '</span>'
+            } else if (total < 5 ){
+            result.innerHTML = '<span class=C2>reprovado (NOTA VERMELHA)' + ' ' + total + '</span>'
+            } else if( 5 <= 6) {
+            result.innerHTML = '<span class=C3>Passou no laranja' + ' ' + total + '</span>'
+            }else{
+        }
+        total = (A + B + C + D) / 4
+    }
+
+    </script>
+
+
+    
+</body>
+</html>

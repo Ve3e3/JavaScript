@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    <h1>LER, CALCULAR E APLICAR</h1>
+    <hr>
+    <p>
+        <label for="txtV">Salario</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtV">
+    </p>
+    <p>
+        <button onclick="Valor()">?</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+    <hr>
+
+    <script>
+
+          const result = document.getElementById('result')
+          let total = 0
+          
+          function Valor(){
+            console.log('valido')
+            let V = parseFloat(document.getElementById('txtV').value)
+            if(V >= 5000 ){
+                total = (parseFloat(V.value)) * 0.6 + total
+                result.innerHTML = total
+            }else{
+              
+            }
+
+          }
+
+    </script>
+    
+</body>
+</html>

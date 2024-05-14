@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios e altas atvidades com JS</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    <h1>ATIVIDADE 01</h1>
+    <hr>
+    <p>
+        <label for="txtCelsius">Celsius para Fahrenheit</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtCelsius">
+    </p>
+    <p>
+        <button onclick="ConversorF()">Converter</button>
+    </p>
+    <p>
+        <label for="txtFah">Fahrenheit para Celsius</label>
+    </p>
+        <input type="number" name="" id="txtFah">
+    </p>
+    <p>
+        <button onclick="ConversorC()">Converter</button>
+    </p>
+    <hr>
+     <div id="result">0</div>
+    <hr>
+
+   
+
+    <script>
+        const C = document.getElementById('txtCelsius')
+        const F = document.getElementById('txtFah')
+        let total = 0
+        
+        function ConversorC(){
+            console.log('teste')
+            total = (F.value - 32) / 1.8
+            result.innerHTML = total
+        }
+        function ConversorF(){
+            console.log('teste')
+            total = (C.value * 1.8) + 32
+            result.innerHTML = total
+        }
+
+    </script>
+</body>
+</html>

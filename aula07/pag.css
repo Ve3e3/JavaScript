@@ -1,0 +1,31 @@
+body{
+    font-family: arial;
+    background-color: antiquewhite;
+}
+.C1{
+    color: blue;
+}
+.C2{
+    color: red;
+}
+.C3{
+    color: orange;
+    text-shadow: 50px;
+}
+.S1{
+    color: orangered;
+}
+.S2{
+    color: lightgray;
+}
+.S3{
+    color: yellow;
+    background-color: black;
+}
+.S4{
+    color: red;
+}
+.S5{
+    color: white;
+    background-color: black;
+}
