@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - JS</title>
+    <link rel="stylesheet" href="pag01.css">
+</head>
+<body>
+    <h1>Olá mundo!</h1>
+    <p id="Texto01"></p>
+    <p id="Texto02"></p>
+
+    <hr>
+    <label for="txtNome">Informe o seu nome</label>
+    <input type="text" id="txtNome">
+    <label for="txtNome2">Informe o seu sobrenome</label>
+    <input type="text" id="txtNome2">
+    <button onclick="EXECUTAR()">OK</button>
+    <br>
+    
+
+
+    <script>
+        document.getElementById("Texto01").innerHTML = "<i>Como vocês estão ?</i>"
+        document.getElementById("Texto02").innerText = "<i>Vai ficar tudo bem!!!</i>"
+
+        function EXECUTAR()
+        {
+           console.log(document.getElementById("txtNome").value + " " + document.getElementById("txtNome2").value);
+        }
+    </script>
+</body>
+</html>
