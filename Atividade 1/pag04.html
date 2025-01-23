@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pag04.css">
+    <title>FORMULARIO</title>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+
+    <p>
+        <label for="txtF"></label>NOME DO FUNCIONARIO: 
+        <input type="text" id="txtF">
+    </p>
+    <p>
+        <label for="txtD txtM txtA"></label> DATA DE NASCIMENTO (DIA/MÊS/ANO):
+        <input type="text" id="txtD">
+        <input type="text" id="txtM">
+        <input type="text" id="txtA">
+    </p>
+    <p>
+        <label for="txtS"></label> SALARIO:
+        <input type="number" id="txtS">
+    </p>
+    <p>
+        <button onclick="GF()">GERAR FICHA.</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+</body>
+</html>

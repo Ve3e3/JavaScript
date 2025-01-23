@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pag03.css">
+    <title>PRODUTOS</title>
+</head>
+<body>
+    <h1>PREÇO</h1>
+
+    <p>
+        <label for="txtP">Valor do produto: </label> 
+        <input type="text" id="txtP">
+    </p>
+    <p>
+        <label for="txtÇ">Valor do desconto: </label>
+        <input type="text" id="txtÇ">
+    </p>
+    <p>
+        <button onclick="Valor()">Calculo</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+
+    <script>
+        const P = document.getElementById("txtP")
+        const Ç = document.getElementById("txtÇ")
+        const result = document.getElementById("result")
+        let total = 0
+        let real = 0
+
+        function Valor(){
+            console.log("TA FUNCIONANDO, GRAÇAS A DEUS!!!")
+            total = (parseFloat(P.value) / 100) - parseFloat(Ç.value)
+            real = Number(total) + Number(P.value)
+            result.innerHTML = "O desconto do produto, será de: R$" + total + " reais <Br> E o valor final será de: R$" + real
+        }
+
+    </script>
+</body>
+</html>

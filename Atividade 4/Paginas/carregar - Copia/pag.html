@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louder</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    <h1 class="TN1">DRAGON BALL E O CALLBACK DE FREZZA</h1>
+<p>
+    <button onclick="Carregador()" class="TN">rodar</button>
+</p>
+<hr>
+<div id="louder" class="TM"></div>  
+
+<script>
+
+function Carregador()
+{
+    function Figura(some) {
+        document.getElementById("louder").innerHTML = `<img src="img/${some}" alt="">`;
+        
+    }
+
+    function myFirst() {
+        Figura("GK22.png");
+    }
+
+    function mySecond() {
+        Figura("GK3.png");
+    }
+
+    setTimeout(myFirst, 3000);
+
+    myFirst();
+    mySecond();
+
+console.log("passou")
+}
+
+    
+</script>
+</body>
+</html>

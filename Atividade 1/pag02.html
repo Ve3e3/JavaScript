@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pag02.css">
+    <title>FUNCIONARIO</title>
+</head>
+<body>
+    <h1>FUNCIONARIO</h1>
+
+    <p>
+        <label for="txtN"></label> NOME DO FUNCIONARIO:
+        <input type="text" id="txtN">
+    </p>
+    <p>
+        <label for="txtS"></label> SALARIO DO FUNCIONARIO:
+        <input type="number" id="txtS">
+    </p>
+    <p>
+        <label for="txtP"></label> PORCENTAGEM DO REAJUSTE:
+        <input type="number" id="txtP">
+    </p>
+         
+    <p>
+        <button onclick="CALCULAR()">Calcular</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+
+    <script>
+        const N = document.getElementById("txtN")
+        const S = document.getElementById("txtS")
+        const P = document.getElementById("txtP")
+        const result = document.getElementById('result') 
+        let total = 0
+        let real = 0
+
+        function CALCULAR(){
+            console.log('TA FUNCIONANDO, GRAÇAS A DEUS!!!')
+            total = (parseFloat(S.value) / 100) * parseFloat(P.value);
+            real = Number(S.value) + Number(total)
+            result.innerHTML = "O funcionario " + N.value + ", terá um reajuste salarial de " + P.value + "%" + ", que ocassionara um acrescimo de: " + total + "<Br> O valor final ficara: " + real
+        }
+    </script>
+</body>
+</html>

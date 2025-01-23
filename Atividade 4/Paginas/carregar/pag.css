@@ -1,0 +1,21 @@
+body{
+background-color: lightskyblue;
+background-image: url("img/dragon-balls-shenron.jpg");
+font-family: Arial;
+}
+.TM{
+    font-size:500%;
+    text-align: center;
+    margin-top: 20px;
+}
+.TN{
+    font-size: 200%;
+    text-align: center;
+}
+.TN1{
+    color: rgb(0, 0, 0);
+    font-size: 350%;
+    text-align: center;
+    border-color: black;
+    border-radius: 50%;
+}

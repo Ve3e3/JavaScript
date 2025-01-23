@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pag.css">
+    <title>Frutas com Array</title>
+
+    <h1>Exibir as Frutas</h1>
+</head>
+<body>
+    <button onclick="Gerar()">Gerar</button>
+
+    <p id="resultado" class="re"></p>
+
+    <script>
+        function Gerar(){
+            const frutas = ['maça','banana', 'laranja', 'manga', 'uva'];
+            let resultado = '';
+            for(let i = 0; i < frutas.length; i++ ){
+                resultado += frutas[i] + '<br> <hr>';
+            }
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+    
+</body>
+</html>

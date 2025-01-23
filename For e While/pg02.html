@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pag.css">
+    <title>Soma dos numeros pares</title>
+</head>
+<body>
+
+    <h1>Somar os Números pares de 1 a 30, resulta em:</h1>
+
+    <button onclick="somar()">Gerar</button>
+
+    <div id="resultado" class="re"></div>
+
+
+    <script>
+
+        function somar(){
+            let resultado = 0;
+
+            for (let i = 1; i<=30; i++){
+                if(i % 2 === 0){
+                    resultado += i; 
+                }
+            }
+
+            document.getElementById('resultado').innerText = resultado;
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tt.css">
+    <title>test 01</title>
+</head>
+<body>
+    
+    <h1>DESCONTO</h1>
+    <hr>
+    <p>
+        <label for="txtV">Insira aqui o valor do produto:</label>
+    </p>
+    <p>
+        <input type="number" id="txtV">
+    </p>
+    <p>
+         <label for="txtD">Insira aqui o valor do desconto:</label>
+    </p>
+    <p>
+        <input type="number" id="txtD">
+    </p>
+    <p>
+         <button onclick="Ok()" class="T1">PROSSEGUIR</button>
+    </p>
+    <hr>
+
+    <div id="result" class="T3">...</div>
+
+    <script>
+       const result = document.getElementById('result') 
+       const V = document.getElementById("txtV")
+       const D = document.getElementById("txtD")
+       let total = 0
+       let real = 0
+
+       function Ok(){
+       total = (parseFloat(V.value) / 100 ) * parseFloat(D.value);
+       real = V.value - total;
+
+
+        result.innerHTML = "R$" + " " + total + " " + "reais de desconto!!!<br>R$" + " " + real + " " + "reais!!!"
+
+       console.log("tá funfando!!!")}
+
+    </script>
+
+</body>
+</html>
