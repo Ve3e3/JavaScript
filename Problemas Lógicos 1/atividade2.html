@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    <h1>LER VALORES</h1>
+    <hr>
+    <p>
+        <label for="txtV1">Qual o seu primeiro valor ?</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtV1">
+    </p>
+    <p>
+        <label for="txtV2"> Qual o seu segundo valor ?</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtV2">
+    </p>
+    <p>
+        <button onclick="Ler()">?</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+    <hr>
+
+    <script>
+        const result = document.getElementById('result')
+
+        function Ler(){
+            let V1 = parseFloat(document.getElementById('txtV1').value)
+            let V2 = parseFloat(document.getElementById('txtV2').value)
+            console.log('valido')
+            if(V1 > V2){
+                result.innerHTML = 'O Primeiro valor, é maior que o segundo'
+            }else{
+                result.innerHTML = 'O Segundo valor, é maior que o primeiro'
+            }
+        }
+        
+
+    </script>
+
+</body>
+</html>

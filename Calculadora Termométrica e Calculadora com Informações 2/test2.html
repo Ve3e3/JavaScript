@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+    <link rel="stylesheet" href="pag.css">
+    <link rel="stylesheet" href="bootstrap.js">
+</head>
+<body>
+    <h1>ATIVIDADE 02</h1>
+    <hr>
+    <p>
+        <label for="txtQt">Quantidade de itens</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtQt">
+    </p>
+    <p>
+        <label for="txtV">Valor de compra</label>
+    </p>
+    <input type="number" name="" id="txtV">
+    <p>
+       <p>
+         <button onclick="Total()">Total</button>
+       </p>
+       <p>
+         <button onclick="Desconto()">Desconto</button>
+       </p>
+       <p>
+        <button onclick="Juros()">Juros</button>
+       </p>
+   
+    <hr>
+     <div id="result">0</div>
+    <hr>
+
+    <script>
+        const Qt = document.getElementById('txtQt')
+        const V = document.getElementById('txtV')
+        let total = 0
+        
+        function Total(){
+            console.log
+            total = parseFloat(Qt.value) * parseFloat(V.value)
+            result.innerHTML = total
+        }
+
+        function Desconto(){
+            console.log
+            total = (parseFloat(Qt.value) * parseFloat(V.value)) * 0.15 - total
+            result.innerHTML = total
+        }
+        function Juros(){
+            console.log
+            total = parseFloat(Qt.value) * parseFloat(V.value) * 0.23 + total
+            result.innerHTML = total
+        }
+
+    </script>
+</body>
+</html>

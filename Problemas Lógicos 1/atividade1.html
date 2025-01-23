@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    <h1>BOLOS & BOLOS</h1>
+    <hr>
+    <p>
+        <label for="txtB">QUANTO PESARÁ O SEU BOLO ?</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtB">
+    </p>
+    <hr>
+    <button onclick="Valor()">?</button>
+    <p>
+        <div id="result">...</div>
+    </p>
+
+    <script>
+        
+        const result = document.getElementById('result')
+
+        function Valor(){
+            let B = parseFloat(document.getElementById('txtB').value)
+            console.log('valido')
+            if (B < 3) { 
+                result.innerHTML = 'Aprovado'
+            }else{
+               result.innerHTML = 'Recusado. Aceitamos pedidos apenas de bolos, abaixos de 2Kg!!!'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

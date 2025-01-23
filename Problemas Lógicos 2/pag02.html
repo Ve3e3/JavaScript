@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    
+    <h1>BORA DECLARAR ESSE IMPOSTO DE RENDA!!! <br>
+        QUAL O SEU SALARIO ?
+    </h1>
+    <hr>
+    <p>
+        <label for="txtV">Informe o valor do seu Salário, na caixa abaixo:</label>
+    </p>
+    <p>
+        R$<input type="number" name="" id="txtV">
+    </p>
+    <p>
+        <button onclick="Valor()">OK</button>
+    </p>
+    <hr>
+    <div id="result">...</div>
+
+    <script>
+
+        function Valor(){
+            let V =parseFloat(document.getElementById("txtV").value)
+            let total = 0
+            const result = document.getElementById("result")
+
+            if (V > 99999999999) {
+                alert("Erro, o VALOR  é alto demais, deve ser menor do que R$99.999.999.999,99")
+                document.getElementById('txtV').value = ""
+                document.getElementById('txtV').focus()
+                result.innerHTML = "-"
+                return
+            }
+            if (V < 0) {
+                alert("Erro, o VALOR  informado, deve ser maior do que R$0,00")
+                document.getElementById('txtV').value = ""
+                document.getElementById('txtV').focus()
+                result.innerHTML = "-"
+                return
+            }
+
+            if(V < 1500){
+                result.innerHTML = "<span class = 'S1'> NIVEL BRONZE </span>"
+            } else if ( V < 3000){
+                result.innerHTML = "<span class = 'S2'> NIVEL PRATA </span>"
+            } else if ( V < 6500){
+                result.innerHTML = "<span class = 'S3'> <b> NIVEL OURO</b> </span>"
+            } else if ( V < 9000){
+                result.innerHTML = "<span class = 'S4'> NIVEL PLATINA </span>"
+            } else{
+                result.innerHTML = "<span class = 'S5'> <b><i> NIVEL VIP </i></b> </span>"
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

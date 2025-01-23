@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+    <link rel="stylesheet" href="pag02.css">
+</head>
+<body>
+    <h1>SITE</h1>
+    <hr>
+    <p id="Texto01"></p>
+    <hr>
+    <label for="txtNome"> NOME</label>
+    <input type="text" id="txtNome">
+    <label for="txtNome2">SOBRENOME</label>
+    <input type="text" id="txtNome2">
+    <br>
+    <label for="txtIdade">IDADE</label>
+    <input type="text" id="txtIdade">
+    <br>
+    <button onclick="executar()">Pronto</button>
+    <hr>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById("Texto01").innerHTML = "<i>BORA DESCOBRIR OQUE TU TA ESCONDENDO AI, FIOTE!</i>"
+        
+            function executar()
+            {
+                console.log(document.getElementById("txtNome").value + " " + document.getElementById("txtNome2").value + "," + " " + document.getElementById("txtIdade").value)
+                document.getElementById("resultado").innerHTML = "Nome completo: " + document.getElementById('txtNome').value + " " + document.getElementById('txtNome2').value + " com " + document.getElementById('txtIdade').value + ' anos.'
+            }
+            
+    </script>
+</body>
+</html>

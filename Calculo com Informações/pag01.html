@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios e altas atvidades com JS</title>
+    <link rel="stylesheet" href="pag01.css">
+</head>
+<body>
+    <h1>ATIVIDADE 01</h1>
+    <hr>
+    <p>
+        <label for="txtN1">VALOR 1</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtN1">
+    </p>
+    <p>
+        <label for="txtN2">VALOR 2</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtN2">
+    </p>
+    <p>
+        <label for="txtN3">VALOR 3</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtN3">
+    </p>
+    <p>
+        <label for="txtN4">VALOR 4</label>
+    </p>
+    <p>
+        <input type="number" name="" id="txtN4">
+    </p>
+    <p>
+        <button onclick="Media()">Média</button>
+    </p>
+    <hr>
+    <p id="result">0</p>
+    <hr>
+
+   
+
+    <script>
+        const n1 = document.getElementById("txtN1")
+        const n2 = document.getElementById("txtN2")
+        const n3 = document.getElementById("txtN3")
+        const n4 = document.getElementById("txtN4")
+        let total = 0
+        
+        function Media(){
+            console.log('Apertou no Média')
+            total = (parseFloat(n1.value) + parseFloat(n2.value) + parseFloat(n3.value) + parseFloat(n4.value)) /4
+            result.innerHTML = total
+        }
+        function Produto(){
+            console.log('Apertou no Produto')
+            total =document.getElementById("Ver Produto").innerHTML + document.getElementById('t1').value + " " + document.getElementById('t2').value + " " + document.getElementById('t3').value
+        }
+
+    </script>
+</body>
+</html>
